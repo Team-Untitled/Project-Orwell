@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Project-Orwell Attention Levels</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/view_attention.css') }}">
+{% endblock %}
+
+## body content
+{% block body %}
+
+    <!--Navigation-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Project-Orwell</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li ><a href="/teacher/home">Home</a></li>
+                <li><a href="#">Attendance List</a></li>
+                <li class="active"><a href="#">Attention Levels</a></li>
+                <li><a href="/view_report">View Report</a></li>
+                <li><a href="/teacher/about">About</a></li>
+                <li><a href="/help/teacher">Help</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/teacher/about"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login/{{2}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <form action="/attention_levels" method="get">
+    <div class="content" style="background-color: #282c34; height: 450px; margin-top: -20px;">
+        <h1 class="heading" style="text-align: center; font-size: 80px;">View Attention</h1>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center">There are students join yet!</h4>
+    {% else %}
+    <table class="pl-table" style="width: 70%; margin-left: 200px;">
+        <tr style="height: 50px;">
+            <th style="width: 20%; color: white; text-align: center; background-color: #2c3c5b; border: 2px solid #ffffff;">ID</th>
+            <th style="width: 20%; color: white; text-align: center; background-color: #2c3c5b; border: 2px solid #ffffff;">First Name</th>
+            {#<th style="width: 20%; color: white; text-align: center;">Last Name</th>
+            <th style="width: 200%; color: white; text-align: center;">E-mail</th>#}
+            <th style="width: 30%; color: white; text-align: center; background-color: #2c3c5b; border: 2px solid #ffffff;">Attention Level</th>
+        </tr>
+        {% for task in tasks %}
+            <tr style="width: 50px;">
+                <td style="width: 20%; color: white; text-align: center; background-color: #989c9e; border: 2px solid #ffffff;">{{ task.id }}</td>
+                <td style="width: 20%; color: white; text-align: center; background-color: #989c9e; border: 2px solid #ffffff;">{{ task.first_name }}</td>
+               {# <td>{{ task.last_name }}</td>
+                <td>{{ task.email }}</td>#}
+                <td style="width: 30%; color: white; text-align: center; background-color: #989c9e; border: 2px solid #ffffff;">{{ task.attention_level }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</div>
+    </form>
+
+    <!--Footer-->
+<div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+    <footer>
+        <div class="row my-5 justify-content-center py-5">
+            <div class="col-11">
+                <div class="row ">
+                    <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                        <h3 class="text-muted mb-md-0 mb-5 bold-text">Untitled.</h3>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                        <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                        <ul class="list-unstyled">
+                             <li ><a href="/teacher/home">Home</a></li>
+                            <li><a href="/teacher/about">About</a></li>
+                            <li><a href="/help/teacher">Help</a></li>
+                            <li>Profile</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                        <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                        <p class="mb-1">57 Ramakrishna Rd, Colombo 00600</p>
+                        <p>Informatics Institute of Technology (IIT)</p>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                        <p class="social text-muted mb-0 pb-0 bold-text">
+                            <a href="https://www.facebook.com/" target="_blank"><span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+                            <a href="https://www.linkedin.com/feed/" target="_blank"><span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a>
+                            <a href="https://twitter.com/LOGIN" target="_blank"><span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+                            <a href="https://www.instagram.com/" target="_blank"><span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                        </p>
+                        <small class="rights"><span>&#169 </span> Team Untitled All Rights Reserved.</small>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                        <h6 class="mt-55 mt-2 text-muted bold-text"><b>Shaumya Alexandra</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> shaumya.20191132@iit.ac.lk</small>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+                        <h6 class="text-muted bold-text"><b>K.H Gunasekara</b></h6><small><span><i class="fa fa-envelope" aria-hidden="true"></i></span> kavindi.2019598@iit.ac.lk</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+.d1 {grid-area: d1;}
+.d2 {grid-area: d2;}
+.d3 {grid-area: d3;}
+
+.help-grid-container {
+    display: grid;
+    grid-template-areas:
+    'd1 d2'
+    'd3 d3';
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 300px 200px;
+    grid-gap: 0px;
+    padding: 0px 0px;
+    background-color: #5e5078;
+    margin-top: 0px;
+}
+
+.help-grid-container > div {
+    /*border: 2px solid #ffffff;*/
+    padding: 10px 20px;
+}
+
+.heading {
+    color: #b1b7b9;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Agency FB";
+    /*margin-top: -20px;*/
+    /*margin-left: 10px;*/
+}
+
+.help {
+    color: #b1b7b9;
+    font-family: 'Arial Rounded MT Bold';
+    font-size: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    .heading {font-size: 60px;}
+    .help {font-size: 16px;}
+    img {width: 100%;}
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Project-Orwell Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/usertype.css') }}">
+{% endblock %}
+
+## body content
+{% block body %}
+
+    <div class="wrapperlogin" style="background-image: url(../static/images/login-bg3.gif); background-size: cover; background-repeat: repeat; height: 100vh;">
+        <div class="imagelogin">
+            <div class=" image">
+               <img src="../static/images/logo.png" id="logo-img">
+            </div>
+        </div>
+
+        <div class="form-wrapperlogin">
+            <div class="welcometopic">
+                <h1> Welcome </h1>
+            </div>
+            <div class="welcomedis">
+                <i>The function of education is to teach one to think intensively and to think critically. Intelligence plus character that is the goal of true education</i>
+            </div>
+            <a href = "/login/{{1}}"><div class="Studentbtn"><button class="Studentbutton">Student</button></div></a>
+            <a href = "/login/{{2}}"><div class="Teacherbtn"><button class="Teacherbutton">Teacher</button></div></a>
+        </div>
+    </div>
+
+{% endblock %}
