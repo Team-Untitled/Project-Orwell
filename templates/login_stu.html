@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Project-Orwell Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+## body content
+{% block body %}
+
+    <div class="wrapperlogin" style="background-image: url(../static/images/login-bg3.gif); background-size: cover; background-repeat: repeat; height: 100vh;">
+        <div class="imagelogin">
+            <div class=" image">
+                <img src="../static/images/logo.png" id="logo-img">
+            </div>
+        </div>
+
+        <div class ="form-wrapperlogin" style="height: 500px">
+            <h1 >Login</h1>
+
+            <form action="/home/student" method="POST">
+                <div class="Username">
+                    <label htmlFor="Username"></label>
+                    <input class="input" type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <div class ="password">
+                    <label htmlFor="password"></label>
+                    <input class="input" type="password" name="password" placeholder="Password" required>
+                </div>
+
+               <div class ="createAccount">
+                      <Link to ="/Home-Student"><button type="submit">Login</button></Link>
+					   <p style="color: white; margin-left: -230px; font-size: 20px; margin-top: 10px;">Login as a guest? <a href="/home" style="color:#0088cc">yes</a></p>
+               </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

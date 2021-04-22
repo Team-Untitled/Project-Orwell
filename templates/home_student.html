@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Project-Orwell Student</title>
+{% endblock %}
+
+## body content
+{% block body %}
+
+    <div class="home-grid-container" id="top">
+    <div class="d1">
+        <p style="font-family: 'Agency FB'; font-size: 80px; font-weight: bold; margin-top: -20px; margin-left: 10px; color: #b1b7b9;">
+            Welcome to
+            <span style="color: #007399">Project-Orwell - Student </span>
+        </p>
+    </div>
+
+    <div class="d2">
+        <p style="font-family: 'Agency FB'; font-size: 36px; font-weight: bold; margin-top: -20px; color: #b1b7b9;">&emsp; &emsp; A System for Monitoring Student’s Attention
+        </p>
+    </div>
+
+    <div class="d3">
+        <img src="../static/images/stu-reco22.gif" style="margin: 0px 50px 50px -50px; height: 100%; width: 100%;">
+    </div>
+    <div class="d4">
+        <a href="/detection">
+            <button class="btn btn-success" style="margin-left: 245px;">
+            <span class="icon">
+                <i class="fa fa-universal-access"></i>
+            </span>
+                <br>Get <br>Started
+            </button>
+        </a>
+
+        <br> <br>
+
+        <a href="/student_profile">
+            <button class="btn btn-success">
+            <span class="icon">
+                <i class="fa fa-id-badge"></i>
+            </span>
+                <br><br>Profile
+            </button>
+        </a>
+
+        <a href="/student/about">
+            <button class="btn btn-success">
+            <span class="icon">
+                <i class="fa fa-bullseye"></i>
+            </span>
+                <br><br>About
+            </button>
+        </a>
+
+        <a href="/help/student">
+            <button class="btn btn-success">
+            <span class="icon">
+                <i class="fa fa-life-ring"></i>
+            </span>
+                <br><br>Help
+            </button>
+        </a>
+
+        <br><br>
+
+        <a href="/">
+            <button class="btn btn-success" style="margin-left: 245px;">
+            <span class="icon">
+                <i class="fa fa-map-signs"></i>
+            </span>
+                <br><br>Sign Out
+            </button>
+        </a>
+
+    </div>
+</div>
+
+<br>
+
+<!--Footer-->
+<div style="background-color: #262626; margin-bottom: -5px; padding-bottom: 0px;">
+    <p class="social text-muted mb-0 pb-0 bold-text">
+        <a href="https://www.facebook.com/" target="_blank"><span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+        <a href="https://www.linkedin.com/feed/" target="_blank"><span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a>
+        <a href="https://twitter.com/LOGIN" target="_blank"><span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+        <a href="https://www.instagram.com/" target="_blank"><span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+        <span style="float: right; font-size: 14px;">&emsp;&emsp; &#169  Team Untitled All Rights Reserved.</span> </p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,98 @@
+/*******************About-teacher.js****************************/
+    .blog-card__title {
+        font-family: 'Quantico';
+        font-weight: bolder;
+        font-size: 25px;
+        text-transform: uppercase;
+        color:#737CA1 ;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .AboutDes{
+
+        width:500px;
+        height:300px;
+        margin-left:300px;
+        margin-top:90px;
+        font-family: 'Open Sans';
+        /*font-weight: 300;*/
+        font-size: 20px;
+        color:#909090;
+        text-align:justify;
+    }
+    .AboutLogo{
+        
+        width:400px;
+        height:300px;
+        margin-left:600px;
+        margin-top:70px;
+        border-radius:50%;
+    }
+    
+    #logo-img2{
+        height:70%;
+        margin-top:40px;
+        margin-left:30px;
+    }
+    
+    .Aboutbox{
+        
+        margin-left:-100px;
+        height:200px;
+        width:300px;
+        margin-top:300px;
+        color: rgb(102, 96, 96);
+        
+    }
+      .blog-card__title2 {
+        font-family: 'Quantico';
+        font-size: 25px;
+        text-transform: uppercase;
+        color: black;
+        padding-top: 10px;
+        padding-bottom:10px;
+        
+      }
+      
+      .home-about-social-links{
+       /* background-color:#006699;*/
+        margin-left:-465px;
+        height:80px;
+        width:280px;
+        margin-top:420px;
+      border-radius:50%;
+      color: rgb(129, 170, 224);
+    
+      }
+
+     .contact-icons{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  float: left;
+}
+.contact-icons i{
+  font-size: 2rem;
+  color: #2c3c5b;
+  opacity: 0.5;
+  padding: 20px;
+  transition: color 0.5s;
+}
+.contact-icons i:hover{
+  color: #daa520;
+}
+.bodyaboutteacher{
+        display: grid;
+        grid-template-areas: 
+          'logo header header header'
+          'body body body body'
+          'footer footer footer footer';
+        grid-template-columns: 15% 35% 25% 25%;
+        grid-template-rows: 100px 340px 100px;
+        grid-gap: 0px;
+        padding: 0px 0px;
+        background-color: #282c34;
+        margin-top: -20px;
+     
+}
